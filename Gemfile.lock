@@ -6,6 +6,7 @@ GEM
     json (1.4.6)
     nokogiri (1.4.3.1)
     rack (1.2.1)
+    rmagick (2.13.1)
     showoff (0.3.2)
       bluecloth
       gli (>= 1.1.1)
@@ -21,4 +22,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rmagick
   showoff
