@@ -387,10 +387,10 @@ implicit return statement for the last line of every function
 
 !SLIDE code
 
-  # Chained comparisons
+    # Chained comparisons
 
-  cholesterol = 127
-  healthy = 200 > cholesterol > 60
+    cholesterol = 127
+    healthy = 200 > cholesterol > 60
 
 
 !SLIDE bullets incremental
