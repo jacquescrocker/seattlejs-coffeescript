@@ -364,6 +364,26 @@ implicit return statement for the last line of every function
     # in
     winner = yes if pick in [47, 92, 13]
 
+
+!SLIDE code
+
+    @@@ruby
+    Account = (customer, cart) ->
+      # @customer is an alias for this.customer
+      @customer = customer
+
+      # binds "this" to the current Account
+      $('.shopping_cart').bind 'click', (event) =>
+        @customer.purchase event.cartItem
+
+!SLIDE code
+
+  # Chained comparisons
+
+  cholesterol = 127
+  healthy = 200 > cholesterol > 60
+
+
 !SLIDE bullets incremental
 
 # Get it installed...
@@ -389,6 +409,16 @@ implicit return statement for the last line of every function
 * Watch a folder: `coffee --watch .`
 
 * Interactive: `coffee -i`
+
+
+!SLIDE bullets
+
+# With Ruby on Rails
+
+* For now, use Barista: https://github.com/Sutto/barista
+
+* Rails 3.1 will have native coffee-script support
+
 
 !SLIDE center
 
