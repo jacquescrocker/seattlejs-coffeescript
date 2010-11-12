@@ -102,6 +102,74 @@
 
 !SLIDE center
 
+# The Killer Features
+
+
+!SLIDE center
+
+# #1: **Strings**
+
+!SLIDE code
+
+    # Multiline Strings
+    html = """
+           <strong>
+             cup of coffeescript
+           </strong>
+           """
+
+!SLIDE code
+
+    @@@ruby
+    # String Interpolation
+
+    author = "Wittgenstein"
+    quote  = "A picture is a fact. -- #{author}"
+
+
+!SLIDE code
+
+    @@@ruby
+    # Interpolation works on regexes too
+
+    sep   = "[.\\/\\- ]"
+    dates = /\d+#{sep}\d+#{sep}\d+/g
+
+
+
+!SLIDE center
+
+# #2: **Classes**
+
+!SLIDE code smaller
+
+    @@@ruby
+    # Create a class
+    class Animal
+      constructor: (@name) ->
+
+      move: (meters) ->
+        alert @name + " moved " + meters + "m."
+
+    # Inherit from Animal (allows use of super)
+    class Snake extends Animal
+      move: ->
+        alert "Slithering..."
+        super 5
+
+    class Horse extends Animal
+      move: ->
+        alert "Galloping..."
+        super 45
+
+    sam = new Snake "Sammy the Python"
+    tom = new Horse "Tommy the Palomino"
+
+    sam.move()
+    tom.move()
+
+!SLIDE center
+
 # **The Basics**
 
 !SLIDE code
@@ -181,78 +249,48 @@
     eldest = if 24 > 21 then "Liz" else "Ike"
 
 
-!SLIDE center
-
-# Killer Feature #1: **Strings**
-
-!SLIDE code
-
-    # Multiline Strings
-    html = """
-           <strong>
-             cup of coffeescript
-           </strong>
-           """
-
 !SLIDE code
 
     @@@ruby
-    # String Interpolation
 
-    author = "Wittgenstein"
-    quote  = "A picture is a fact. -- #{author}"
+    # existential operator (checks for undefined and null)
 
+    name = "Joe Blow"
+    showErrors() unless name? and email?
 
-!SLIDE code
-
-    @@@ruby
-    # Interpolation works on regexes too
-
-    sep   = "[.\\/\\- ]"
-    dates = /\d+#{sep}\d+#{sep}\d+/g
+    # sets email if it doesnt exist
+    email ?= "joe@blow.com"
 
 
+!SLIDE bullets incremental
 
-!SLIDE center
+# Get it installed...
 
-# Killer Feature #2: **Classes**
+* via Homebrew
 
-!SLIDE code smaller
+    brew install coffee-script
 
-    @@@ruby
-    # Create a class
-    class Animal
-      constructor: (@name) ->
+* via NPM (node)
 
-      move: (meters) ->
-        alert @name + " moved " + meters + "m."
+    npm install coffee-script
 
-    # Inherit from Animal (allows use of super)
-    class Snake extends Animal
-      move: ->
-        alert "Slithering..."
-        super 5
+* Manually (easy)
 
-    class Horse extends Animal
-      move: ->
-        alert "Galloping..."
-        super 45
+    http://coffeescript.org/#installation
 
-    sam = new Snake "Sammy the Python"
-    tom = new Horse "Tommy the Palomino"
+!SLIDE bullets
 
-    sam.move()
-    tom.move()
+# How to use it:
 
+* Compile to js: `coffee myfile.coffee`
 
-!SLIDE center increment
+* Watch a folder: `coffee --watch .`
 
-# Gotchas...
-
+* Interactive: `coffee -i`
 
 
 !SLIDE center
 
 ## Thanks!
 
-### Learn it all at http://coffeescript.org
+### Learn more at http://coffeescript.org
