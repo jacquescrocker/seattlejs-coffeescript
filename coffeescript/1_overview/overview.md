@@ -1,10 +1,10 @@
 !SLIDE center
 
-![CoffeeScript](logo.png)
-# CoffeeScript
+# ![CoffeeScript](logo.png) CoffeeScript
+
+### syntax matters
 
 !SLIDE center
-
 
 !SLIDE bullets incremental
 
