@@ -70,6 +70,9 @@
         x: parseInt(coords[0], 10)
         y: parseInt(coords[1], 10)
 
+!SLIDE center
+
+## Douglas Crockford likes it!
 
 !SLIDE
 
