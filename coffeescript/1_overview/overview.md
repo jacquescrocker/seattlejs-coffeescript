@@ -71,7 +71,6 @@
         y: parseInt(coords[1], 10)
 
 
-
 !SLIDE
 
 ### "One of my favorites along those lines is a new little language called CoffeeScript, which takes the good parts -- not even all of the good parts, but a nice little language -- and comes up with groovy new syntax for it, which is minimal. It's almost like dandelions: little fluffs of programs that do everything that conventional JavaScript programs do. You can't do anything in that language that you can't do in JavaScript, so it's all cosmetic. I don't know if all or much of that will find its way into JavaScript, because I'm not sure there's enough of a payoff there. But just as an experiment, as a design exercise, I think it's a brilliant piece of work. I'm excited to see stuff like that happening. "
@@ -190,11 +189,14 @@
     date = if friday then sue else jill
 
 
+!SLIDE center
+
+# Beautiful Object Syntax
+
 !SLIDE code
 
     @@@ruby
 
-    # Assign objects:
     kids =
       brother:
         name: "Max"
@@ -206,6 +208,22 @@
 !SLIDE code
 
     @@@ruby
+    # jquery ajax call
+    $.ajax
+      url: "/drag"
+      type: "POST"
+      contentType: 'application/json'
+      data:
+        game: Game.gameId()
+        tiles: serverTileCoords
+
+!SLIDE center
+
+# Beautiful Function Syntax
+
+!SLIDE code
+
+    @@@ruby
     # Functions:
     square = (x) -> x * x
 
@@ -213,11 +231,69 @@
     square = (x) ->
       x * x
 
+!SLIDE code
+
+    @@@ruby
+
+    # common jquery code
+    $('.nav-item').bind
+      click: (e) ->
+        console.log("clicked")
+
+      mouseover: (e) ->
+        console.log("mouseover")
+
+      mouseout: (e) ->
+        console.log("mouseout")
+
+!SLIDE center
+
+# Smart variable scoping
+
+(no more forgetting to type var!)
+
+!SLIDE code
+
+    @@@ruby
+    # lexical scoping
+    outer = 1
+    changeNumbers = ->
+      inner = -1
+      outer = 10
+    inner = changeNumbers()
+
+
+!SLIDE bullets incremental
+
+# BTW: No global variables!
+
+* Use: `window.myvariable = "something"`
+
+
+!SLIDE center
+
+# Safely use jQuery
+
+    $ = jQuery
+
+!SLIDE code
+
+    @@@javascript
+
+    // yeah, we dont need to do this anymore
+    (function($) {
+
+      // my jquery code
+
+    })(jQuery);
+
+!SLIDE center
+
+# Array Comprehension
 
 !SLIDE code smaller
 
     @@@ruby
-    # Array Comprehension
     lunch = eat food for food in ['toast', 'cheese', 'wine']
 
     # Naive collision detection.
@@ -234,10 +310,15 @@
         deliver new eggCarton dozen
 
 
+!SLIDE center
+
+# BTW, everything is an expression
+
+implicit return statement for the last line of every function
+
 !SLIDE code
 
     @@@ruby
-    # Everything is an expression
     grade = (student) ->
       if student.excellentWork
         "A+"
@@ -248,6 +329,9 @@
 
     eldest = if 24 > 21 then "Liz" else "Ike"
 
+!SLIDE center
+
+# More Goodies
 
 !SLIDE code
 
@@ -261,6 +345,21 @@
     # sets email if it doesnt exist
     email ?= "joe@blow.com"
 
+
+!SLIDE code
+
+    @@@ruby
+    # is
+    launch() if ignition is on
+
+    # isnt
+    volume = 10 if band isnt SpinalTap
+
+    # unless
+    letTheWildRumpusBegin() unless answer is no
+
+    # in
+    winner = yes if pick in [47, 92, 13]
 
 !SLIDE bullets incremental
 
@@ -287,7 +386,6 @@
 * Watch a folder: `coffee --watch .`
 
 * Interactive: `coffee -i`
-
 
 !SLIDE center
 
