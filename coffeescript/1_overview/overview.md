@@ -113,7 +113,9 @@
 
 !SLIDE code
 
+    @@@ruby
     # Multiline Strings
+
     html = """
            <strong>
              cup of coffeescript
@@ -123,9 +125,11 @@
 !SLIDE code
 
     @@@ruby
+
     # String Interpolation
 
     author = "Wittgenstein"
+
     quote  = "A picture is a fact. -- #{author}"
 
 
@@ -135,6 +139,7 @@
     # Interpolation works on regexes too
 
     sep   = "[.\\/\\- ]"
+
     dates = /\d+#{sep}\d+#{sep}\d+/g
 
 
@@ -200,6 +205,7 @@
 
     @@@ruby
 
+    # lose the braces
     kids =
       brother:
         name: "Max"
@@ -211,6 +217,7 @@
 !SLIDE code
 
     @@@ruby
+
     # jquery ajax call
     $.ajax
       url: "/drag"
@@ -227,6 +234,7 @@
 !SLIDE code
 
     @@@ruby
+
     # Functions:
     square = (x) -> x * x
 
@@ -238,7 +246,7 @@
 
     @@@ruby
 
-    # common jquery code
+    # bind some jquery events
     $('.nav-item').bind
       click: (e) ->
         console.log("clicked")
@@ -258,6 +266,7 @@
 !SLIDE code
 
     @@@ruby
+
     # lexical scoping
     outer = 1
     changeNumbers = ->
