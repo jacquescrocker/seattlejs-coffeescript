@@ -109,7 +109,7 @@
 
 !SLIDE center
 
-# #1: **Strings**
+# Killer Feature #1: **Strings**
 
 !SLIDE code
 
@@ -141,7 +141,7 @@
 
 !SLIDE center
 
-# #2: **Classes**
+# Killer Feature #2: **Classes / Inheritance**
 
 !SLIDE code smaller
 
